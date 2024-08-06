@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Prediction Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bceaee;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #060606;
+        }
+
+        h2 {
+            color: #05614f;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #0e9076;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+
+        .button:hover {
+            background-color: #2d767f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Insurance Prediction Model</h1>
+
+        <h2>Overview</h2>
+        <p>
+            The insurance prediction model is a sophisticated tool designed to estimate the cost of insurance premiums
+            based on a variety of factors such as age, gender, BMI, smoking status, and region. By analyzing historical
+            data, the model leverages machine learning algorithms to provide accurate predictions of insurance costs for
+            individuals.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul>
+
+            <li><strong>Interactive Web Form:</strong> Users can input various personal details to receive predictions.
+            </li>
+            <li><strong>Multiple Prediction Models:</strong> The project uses Linear Regression, Decision Tree, and
+                Random Forest models.</li>
+            <li><strong>Detailed Results:</strong> Provides predictions with explanations on whether the charges are
+                high or low.</li>
+            <li><strong>Data Analysis:</strong> Utilizes Pandas and NumPy for data manipulation and analysis.</li>
+            <li><strong>Visualization:</strong> Employs Matplotlib and Seaborn for clear and informative data
+                visualizations.</li>
+            <li><strong>Machine Learning:</strong> Implements algorithms from scikit-learn, including linear regression,
+                decision trees, and random forests.</li>
+            <li><strong>Model Persistence:</strong> Uses joblib to efficiently save and load machine learning models.
+            </li>
+            
+
+        </ul>
+
+
+        <h2>How It Works</h2>
+        <p>
+            The model begins by preprocessing the input data, handling any missing values and encoding categorical
+            variables. The dataset is then split into training and testing sets to evaluate the performance of the
+            models. Various machine learning algorithms are trained on the training data, and their performance is
+            assessed using metrics such as R-squared (R2) on the test data.
+        </p>
+
+        <h2>Applications</h2>
+        <p>
+            This prediction model is highly valuable for both insurance companies and individuals:
+        </p>
+        <ul>
+            <li><strong>Insurance Companies:</strong> Helps in assessing risk and setting premium prices accurately.
+            </li>
+            <li><strong>Individuals:</strong> Enables understanding of how different factors influence their insurance
+                costs.</li>
+        </ul>
+
+        <a href="/" class="button">Return to Home</a>
+    </div>
+</body>
+
+</html>

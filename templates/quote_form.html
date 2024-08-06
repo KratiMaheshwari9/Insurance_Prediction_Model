@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Quote Form - Insurance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Insurance Prediction</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/project">Get a Quote</a>
+            <a href="/contact">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Fill Out the Form</h2>
+        <form action="/submit" method="post">
+            <table>
+                <tr>
+                    <th colspan="2">Personal Information</th>
+                </tr>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="marital_status">Marital Status:</label></td>
+                    <td>
+                        <select id="marital_status" name="marital_status" required>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="occupation">Occupation:</label></td>
+                    <td><input type="text" id="occupation" name="occupation" required></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Health Information</th>
+                </tr>
+                <tr>
+                    <td><label for="health_condition">Do you have any pre-existing health conditions?:</label></td>
+                    <td>
+                        <select id="health_condition" name="health_condition" required>
+                            <option value="none">None</option>
+                            <option value="condition_1">Condition 1</option>
+                            <option value="condition_2">Condition 2</option>
+                            <option value="condition_3">Condition 3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="smoking_status">Smoking Status:</label></td>
+                    <td>
+                        <select id="smoking_status" name="smoking_status" required>
+                            <option value="non_smoker">Non-smoker</option>
+                            <option value="smoker">Smoker</option>
+                            <option value="former_smoker">Former Smoker</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="exercise_frequency">How often do you exercise?:</label></td>
+                    <td>
+                        <select id="exercise_frequency" name="exercise_frequency" required>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="rarely">Rarely</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Contact Information</th>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="text" id="phone" name="phone"></td>
+                </tr>
+                <tr>
+                    <td><label for="zipcode">Zip Code:</label></td>
+                    <td><input type="text" id="zipcode" name="zipcode" required></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Additional Information</th>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="additional_info">Additional Information:</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="additional_info" name="additional_info"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; Made by Krati Maheshwari</p>
+    </footer>
+</body>
+</html>

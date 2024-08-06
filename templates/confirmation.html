@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - Insurance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #c9d9e9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Insurance Prediction</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/project">Get a Quote</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/view_submissions">View Submissions</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Confirmation</h2>
+        <p>Thank you for your submission, {{ name }}!</p>
+        <p>Your insurance quote details:</p>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{ name }}</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>{{ age }}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{ gender }}</td>
+            </tr>
+            <tr>
+                <td>Marital Status</td>
+                <td>{{ marital_status }}</td>
+            </tr>
+            <tr>
+                <td>Occupation</td>
+                <td>{{ occupation }}</td>
+            </tr>
+            <tr>
+                <td>Health Condition</td>
+                <td>{{ health_condition }}</td>
+            </tr>
+            <tr>
+                <td>Smoking Status</td>
+                <td>{{ smoking_status }}</td>
+            </tr>
+            <tr>
+                <td>Exercise Frequency</td>
+                <td>{{ exercise_frequency }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{ email }}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>{{ phone }}</td>
+            </tr>
+            <tr>
+                <td>Zip Code</td>
+                <td>{{ zipcode }}</td>
+            </tr>
+            <tr>
+                <td>Additional Info</td>
+                <td>{{ additional_info }}</td>
+            </tr>
+            <tr>
+                <td>Total Charge</td>
+                <td>{{ total_charge }}</td>
+            </tr>
+            <tr>
+                <td>Charge Status</td>
+                <td>{{ charge_status }}</td>
+            </tr>
+        </table>
+        <a href="/view_submissions" class="button">View All Submissions</a>
+    </main>
+    <footer>
+        <p>&copy; Made by Krati Maheshwari</p>
+    </footer>
+</body>
+</html>

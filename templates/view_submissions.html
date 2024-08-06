@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Submissions - Insurance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Insurance Prediction</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/project">Get a Quote</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/view_submissions">View Submissions</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Submitted Quotes</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Marital Status</th>
+                <th>Occupation</th>
+                <th>Health Condition</th>
+                <th>Smoking Status</th>
+                <th>Exercise Frequency</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Zip Code</th>
+                <th>Additional Info</th>
+                <th>Total Charge</th>
+                <th>Charge Status</th>
+            </tr>
+            {% for submission in submissions %}
+            <tr>
+                <td>{{ submission[0] }}</td>
+                <td>{{ submission[1] }}</td>
+                <td>{{ submission[2] }}</td>
+                <td>{{ submission[3] }}</td>
+                <td>{{ submission[4] }}</td>
+                <td>{{ submission[5] }}</td>
+                <td>{{ submission[6] }}</td>
+                <td>{{ submission[7] }}</td>
+                <td>{{ submission[8] }}</td>
+                <td>{{ submission[9] }}</td>
+                <td>{{ submission[10] }}</td>
+                <td>{{ submission[11] }}</td>
+                <td>{{ submission[12] }}</td>
+                <td>{{ submission[13] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+    <footer>
+        <p>&copy; Made by Krati Maheshwari</p>
+    </footer>
+</body>
+</html>
